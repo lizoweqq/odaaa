@@ -4,6 +4,9 @@
 - python -m venv venv
 - .\venv\Scripts\activate
 
-## Linter 
+## прибрати пробіли  
 - Ctrl - Alt - l
+
+## копіювати 
+- Ctrl - D
 - 
