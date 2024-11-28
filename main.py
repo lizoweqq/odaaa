@@ -5,7 +5,6 @@ import sign
 
 # змінна
 author_name = "ліза мороз"
-
 # формат
 print(sign.ODA_LIZA.format(author_name))
 
