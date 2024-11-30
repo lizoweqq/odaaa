@@ -4,8 +4,8 @@
 # f = '\N{Footprints}'  # not informative naming, the correct code below
 smile_footprint = '\U0001F463'
 
-User_name = "David"
-User_age = 14
-результат = "My name is " + User_name + ", I am " + str(User_age) + " years old" + smile_footprint
+user_name = "David"
+user_age = 14
+result = "My name is " + user_name + ", I am " + str(user_age) + " years old" + smile_footprint
 
-print(результат)
+print(result)
