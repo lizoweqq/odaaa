@@ -19,7 +19,7 @@ item_1_price = Decimal('25.50')
 # нзва, кількість і ціна 2 товару
 item_2_title = textwrap.shorten('Молоко'.ljust(20, '.'), width=20, placeholder='...')
 item_2_quantity = 1
-item_2_price = Decimal('38.20')
+item_2_price = Decimal('39.20')
 
 #вартість
 item_1_total_cost = Decimal(item_1_quantity) * item_1_price
@@ -28,15 +28,16 @@ item_1_total_cost_right_format = item_1_total_cost.quantize(Decimal('1.00'))
 item_2_total_cost = Decimal(item_2_quantity) * item_2_price
 item_2_total_cost_right_format = item_2_total_cost.quantize(Decimal('1.00'))
 
-#підсумок перенесли сюди
-total_cost = item_1_total_cost_right_format + item_2_total_cost_right_format
+#загальна вартість
+total_cost = (item_1_total_cost + item_2_total_cost).quantize(Decimal('1.00'))
+
 
 printing_template = '{}\t\t\t\t\t{}\t\t\t\t{}\t\t\t{}'
 
 # printing receipt
 print('\n\n\n')
-print('фіскальний чек'.capitalize().center(80, '~'))
-print('магазин "все для дому"'.upper().center(80))
+print('\n' + 'фіскальний чек'.center(50, '~'))
+print('МАГАЗИН "ВСЕ ДЛЯ ДОМУ"'.center(50))
 print('Товар\t\t\t\t\t\t\t\t\tкількість\t\tціна\t\tвартість')
 print(printing_template.format(item_1_title, item_1_quantity, item_1_price, item_1_total_cost_right_format))
 print(printing_template.format(item_2_title, item_2_quantity, item_2_price, item_2_total_cost_right_format))
@@ -45,9 +46,7 @@ print(printing_template.format(
     'ВСЬОГО'.ljust(20),
     item_1_quantity + item_2_quantity,
     '',
-    '',
     total_cost
-       )
-)
+))
 print(datetime.now().strftime('%d-%m-%Y %H:%M:%S').rjust(80))
 print('\n\n')
