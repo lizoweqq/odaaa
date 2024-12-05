@@ -9,4 +9,6 @@
 
 ## копіювати 
 - Ctrl - D
-- 
+
+pip install pywebio
+
