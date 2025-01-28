@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ brand }} {{ model }}</title>
+</head>
+<body>
+    <h1>{{ brand }} {{ model }}</h1>
+    <p><b>Рік випуску:</b> {{ year }}</p>
+    <p><b>Ціна:</b> {{ price }} $</p>
+    <p><b>Кількість місць:</b> {{ seats }}</p>
+    <p><b>Категорія:</b> {{ "Преміум автомобіль" if price > 30000 else "Доступний автомобіль" }}</p>
+
+    <h2>Додаткові опції:</h2>
+    <ul>
+        {% for option in options %}
+            <li>{{ option }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
